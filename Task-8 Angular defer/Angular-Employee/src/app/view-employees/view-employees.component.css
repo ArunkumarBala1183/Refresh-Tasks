@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.table
+{
+    width: 70rem;
+}
+
+.card
+{
+    border: lightgray 1px solid;
+    padding: 1rem;
+}
+
+.head
+{
+    font-family: 'Roboto', sans-serif;
+    color: #2E2EFF;
+}
+
+tr th{
+    color: #8A8AFF;
+}
+
+ul
+{
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    text-decoration: none;
+}

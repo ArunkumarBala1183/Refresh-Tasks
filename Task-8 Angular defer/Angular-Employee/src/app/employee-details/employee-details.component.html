@@ -1,0 +1,71 @@
+<!-- <div class="container">
+    <div class="image">
+        <svg width="100" height="100" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.125 6.75c-.184 2.478-2.063 4.5-4.125 4.5-2.063 0-3.945-2.021-4.125-4.5-.188-2.578 1.64-4.5 4.125-4.5 2.484 0 4.312 1.969 4.125 4.5Z">
+            </path>
+            <path
+                d="M12 14.25c-4.078 0-8.217 2.25-8.983 6.497-.092.512.197 1.003.733 1.003h16.5c.536 0 .826-.491.734-1.003C20.217 16.5 16.078 14.25 12 14.25Z">
+            </path>
+        </svg>
+    </div>
+    <h2 class="name">{{employeeDetail.name}}</h2>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card px-5 py-3">
+                <h5>Employee Details</h5>
+
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card px-5 py-3">
+                <h5>Roles</h5>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card px-5 py-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nam, aliquam est harum nemo veniam sint
+                voluptate enim perferendis quaerat ducimus earum laboriosam facilis soluta corrupti architecto
+                asperiores fugit rerum.
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <h3>Personal Info</h3>
+    <div class="card">
+        <h5 class="fw-semibold">Basic Information</h5>
+        <div *ngFor="let key of this.infoOrder">
+            <ng-container *ngIf="key !== 'address' && key !== 'employeeRoles'">
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <label class="fs-6 fw-normal text-capitalize">{{key}}</label>
+                    </div>
+                    <div class="col-6">
+                        <label class="fs-6 fw-normal">{{employeeDetail[key]}}</label>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="fw-semibold">Contact Information</h5>
+        <div *ngFor="let contact of contactOrder">
+            <div class="row mt-4">
+                <div class="col-6">
+                    <label class="fs-6 fw-normal text-capitalize">{{contact}}</label>
+                </div>
+                <div class="col-6">
+                    <label class="fs-6 fw-normal">{{employeeDetail.address[contact]}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="fw-normal">Roles</h5>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptatem repellendus culpa laborum rerum labore molestias debitis? Recusandae expedita tenetur nulla sunt, ex quisquam nemo ea ab officiis adipisci eligendi.
+    </div>
+</div>

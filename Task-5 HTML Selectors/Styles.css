@@ -1,0 +1,29 @@
+.card
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-inline: auto;
+    height: 150px;
+    width: 300px;
+    margin-block: 10rem;
+    padding: 20px;
+}
+
+.productTable
+{
+    height: fit-content;
+    width: fit-content;
+}
+
+input:hover
+{
+    background-color: lightgrey;
+}
+
+#button
+{
+    margin-block: 10px;
+    margin-inline:auto;
+    font-family: 'Courier New', Courier, monospace;
+}

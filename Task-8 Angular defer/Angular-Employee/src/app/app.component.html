@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<!-- @defer () {
+<div class="container">
+    <router-outlet />
+</div>
+} -->
+
+<!-- @defer (on timer(5000 ms)) {
+<div class="container">
+    <router-outlet />
+</div>
+} -->
+
+<!-- @defer (on timer(5000 ms)) {
+<div class="container">
+    <router-outlet />
+</div>
+}@placeholder {
+<h1>Loading....</h1>
+} -->
+
+<!-- @defer (on interaction) {
+<div class="container">
+    <router-outlet />
+</div>
+}@placeholder {
+<h1>Loading....</h1>
+} -->
+
+<!-- @defer (on hover) {
+<div class="container">
+    <router-outlet />
+</div>
+}@placeholder {
+<h1>Loading....</h1>
+} -->
+
+<!-- @defer (on timer(5000 ms)) {
+<div class="container">
+    <router-outlet />
+</div>
+}@placeholder {
+<h1>Loading....</h1>
+} -->
+
+<!-- <button class="btn btn-primary" (click)="showContent()">LoadContent</button>
+
+@defer (when loadContent) {
+<div class="container">
+    <router-outlet />
+</div>
+} -->
+
+
+@defer () {
+<div class="container">
+    <router-outlet />
+</div>
+}@loading(minimum 5000ms) {
+    <h1>Loading Content</h1>
+}@error {
+    <h2>unable to reterive</h2>
+}

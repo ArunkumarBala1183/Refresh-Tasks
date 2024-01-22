@@ -1,0 +1,27 @@
+<h3 class="head">Employees</h3>
+<div class="card">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">EmployeeId</th>
+                <th scope="col">Name</th>
+                <th scope="col">EmailId</th>
+                <th scope="col">Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employeeDetails" (click)="viewDetails(employee.employeeId)">
+                <td scope="col">{{employee.employeeId}}</td>
+                <td scope="col">{{employee.name}}</td>
+                <td scope="col">{{employee.emailId}}</td>
+                <td scope="col">
+                    <ul>
+                        <li *ngFor="let role of employee.employeeRoles">
+                            {{roleRepository[role.roleId]}} 
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

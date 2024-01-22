@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@300;700&family=Poppins:wght@100&family=Roboto:ital,wght@1,300&display=swap');
+
+.navbar_box
+{
+    display: flex;
+    justify-content: end;
+    padding-inline: 5rem;
+    padding-block: 2rem;
+}
+
+ul li a{
+    font-size: larger;
+    font-family: 'Inter', sans-serif;
+    color: #5C5C5C;
+}
+
+ul li :hover{
+    color: blue;
+}
+
+li
+{
+    margin-inline: 25px;
+}
+
+.dropdown-contents
+{
+    display: none;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+}
+
+.dropdown-contents ul
+{
+    list-style: none;
+    padding-inline: inherit;
+    padding-block: 1rem;
+}
+
+.dropdown-contents ul li a
+{
+    text-decoration: none;
+}
+
+.link:hover .dropdown-contents
+{
+    display: block;
+}

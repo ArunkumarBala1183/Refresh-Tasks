@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in HTML</title>
+    <link rel="stylesheet" href="./Styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="card">
+        <form>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="firstName" placeholder="FirstName">
+                <label for="firstName">First Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="lastName" placeholder="LastName">
+                <label for="lastName">Last Name</label>
+            </div>
+            <button id="button" type="button" onclick="displayContent()" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div id="display">
+
+        </div>
+    </div>
+
+    <div class="card productTable">
+        <div class="loadContent">
+            <button type="button" class="btn btn-primary" onclick="displayProducts()">Show Product</button>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Discount Percentage</th>
+                    <th scope="col">Category</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function displayContent() {
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+
+
+
+            let display = `First Name : ${firstName} \n Last Name : ${lastName}`;
+
+            let result = document.getElementById('display');
+
+            result.innerHTML = `<p>First Name : ${firstName} <br> Last Name: ${lastName}</p>`
+        }
+
+        function displayProducts() {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    var products = JSON.parse(this.responseText);
+
+                    var tableBody = document.getElementById("productTableBody");
+
+                    tableBody.innerHTML = "";
+
+                    var row = tableBody.insertRow();
+
+                    var cell1 = row.insertCell(0);
+                    cell1.innerHTML = products.id;
+
+                    var cell1 = row.insertCell(1);
+                    cell1.innerHTML = products.title;
+
+                    var cell1 = row.insertCell(2);
+                    cell1.innerHTML = products.description;
+
+                    var cell1 = row.insertCell(3);
+                    cell1.innerHTML = products.price;
+
+                    var cell1 = row.insertCell(4);
+                    cell1.innerHTML = products.discountPercentage;
+
+                    var cell1 = row.insertCell(5);
+                    cell1.innerHTML = products.category;
+                }
+            };
+
+            httpRequest.open("GET", "https://dummyjson.com/products/1", true);
+            httpRequest.send();
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

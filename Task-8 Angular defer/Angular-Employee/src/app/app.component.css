@@ -1,0 +1,7 @@
+.container
+{
+    margin-block: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-block: 4rem;
+}
