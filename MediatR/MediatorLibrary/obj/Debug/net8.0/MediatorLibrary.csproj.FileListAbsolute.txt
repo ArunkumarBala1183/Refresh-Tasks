@@ -1,0 +1,13 @@
+D:\Tasks\MediatR\MediatorLibrary\bin\Debug\net8.0\MediatorLibrary.deps.json
+D:\Tasks\MediatR\MediatorLibrary\bin\Debug\net8.0\MediatorLibrary.dll
+D:\Tasks\MediatR\MediatorLibrary\bin\Debug\net8.0\MediatorLibrary.pdb
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.csproj.AssemblyReference.cache
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.AssemblyInfoInputs.cache
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.AssemblyInfo.cs
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.csproj.CoreCompileInputs.cache
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.sourcelink.json
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.dll
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\refint\MediatorLibrary.dll
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\MediatorLibrary.pdb
+D:\Tasks\MediatR\MediatorLibrary\obj\Debug\net8.0\ref\MediatorLibrary.dll

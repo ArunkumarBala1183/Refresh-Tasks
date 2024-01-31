@@ -1,0 +1,12 @@
+D:\Tasks\NUnit\BankingApp\bin\Debug\net8.0\BankingApp.deps.json
+D:\Tasks\NUnit\BankingApp\bin\Debug\net8.0\BankingApp.dll
+D:\Tasks\NUnit\BankingApp\bin\Debug\net8.0\BankingApp.pdb
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.AssemblyInfoInputs.cache
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.AssemblyInfo.cs
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.csproj.CoreCompileInputs.cache
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.sourcelink.json
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.dll
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\refint\BankingApp.dll
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\BankingApp.pdb
+D:\Tasks\NUnit\BankingApp\obj\Debug\net8.0\ref\BankingApp.dll

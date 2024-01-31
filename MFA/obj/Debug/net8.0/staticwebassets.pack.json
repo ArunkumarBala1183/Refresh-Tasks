@@ -1,0 +1,289 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\all.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\brands.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\brands.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\brands.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\fontawesome.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\regular.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\regular.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\regular.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\solid.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\solid.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\solid.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\v4-shims.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\css\\fontawesome-free-5.4.1-web\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\js\\qrcode.min.js",
+      "PackagePath": "staticwebassets\\js\\qrcode.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Dotnet\\GoogleAuthen\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IdentityStandaloneMfa.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.IdentityStandaloneMfa.props",
+      "PackagePath": "build\\IdentityStandaloneMfa.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.IdentityStandaloneMfa.props",
+      "PackagePath": "buildMultiTargeting\\IdentityStandaloneMfa.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.IdentityStandaloneMfa.props",
+      "PackagePath": "buildTransitive\\IdentityStandaloneMfa.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
