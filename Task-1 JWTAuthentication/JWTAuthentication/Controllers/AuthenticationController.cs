@@ -1,8 +1,10 @@
 using System.Net;
 using JWTAuthentication.Repository.AppModels;
 using JWTAuthentication.Repository.DbModels;
+using JWTAuthentication.Repository.DTOs;
 using JWTAuthentication.Repository.Services;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace JWTAuthentication.Controllers
 {
@@ -17,7 +19,7 @@ namespace JWTAuthentication.Controllers
         }
         
         [HttpPost("GetUserDetails")]
-        public async Task<IActionResult> GetUserDetails([FromBody] UserCredentaials usercredentials)
+        public async Task<IActionResult> GetUserDetails([FromBody] UserCrendentialsDTO usercredentials)
         {
             var response = await authenticationService.authenticateUser(usercredentials);
             if(response.GetType() != typeof(HttpStatusCode))

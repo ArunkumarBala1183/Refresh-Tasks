@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Tasks\\JWTAuthentication\\JWTAuthentication.csproj": {}
+    "D:\\Tasks\\Task-1 JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj": {}
   },
   "projects": {
-    "D:\\Tasks\\JWTAuthentication\\JWTAuthentication.csproj": {
+    "D:\\Tasks\\Task-1 JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tasks\\JWTAuthentication\\JWTAuthentication.csproj",
+        "projectUniqueName": "D:\\Tasks\\Task-1 JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
         "projectName": "JWTAuthentication",
-        "projectPath": "D:\\Tasks\\JWTAuthentication\\JWTAuthentication.csproj",
+        "projectPath": "D:\\Tasks\\Task-1 JWTAuthentication\\JWTAuthentication\\JWTAuthentication.csproj",
         "packagesPath": "C:\\Users\\arunkumar.bala\\.nuget\\packages\\",
-        "outputPath": "D:\\Tasks\\JWTAuthentication\\obj\\",
+        "outputPath": "D:\\Tasks\\Task-1 JWTAuthentication\\JWTAuthentication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arunkumar.bala\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.1, )"

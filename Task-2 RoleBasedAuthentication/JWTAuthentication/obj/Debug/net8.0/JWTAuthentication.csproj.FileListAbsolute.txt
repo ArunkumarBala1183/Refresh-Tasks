@@ -290,3 +290,5 @@ D:\Tasks\Task-2 RoleBasedAuthentication\JWTAuthentication\obj\Debug\net8.0\refin
 D:\Tasks\Task-2 RoleBasedAuthentication\JWTAuthentication\obj\Debug\net8.0\JWTAuthentication.pdb
 D:\Tasks\Task-2 RoleBasedAuthentication\JWTAuthentication\obj\Debug\net8.0\JWTAuthentication.genruntimeconfig.cache
 D:\Tasks\Task-2 RoleBasedAuthentication\JWTAuthentication\obj\Debug\net8.0\ref\JWTAuthentication.dll
+D:\Tasks\Task-2 RoleBasedAuthentication\JWTAuthentication\obj\Debug\net8.0\JWTAuthentication.sourcelink.json
+D:\Tasks\Task-2 RoleBasedAuthentication\JWTAuthentication\bin\Debug\net8.0\AutoMapper.dll

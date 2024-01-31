@@ -7,10 +7,19 @@ using EmployeeManagement.Repository.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(option => {
+    option.IdleTimeout = TimeSpan.FromMinutes(10);
+    option.Cookie.HttpOnly = true;
+    option.Cookie.IsEssential = true; 
+});
 
 // Add services to the container.
 
@@ -37,8 +46,10 @@ builder.Services.Configure<EmailConfig>(builder.Configuration.GetSection("EmailC
 builder.Services.AddTransient<IEmployeeService, EmployeeHelper>();
 builder.Services.AddTransient<IRoleService, RoleHelper>();
 builder.Services.AddTransient<IUserService, UserHelper>();
-builder.Services.AddTransient<IAuthenticateService , AuthenticationHelper>();
+builder.Services.AddScoped<IAuthenticateService , AuthenticationHelper>();
 builder.Services.AddTransient<IEmailService, EmailHelper>();
+
+builder.Services.AddSingleton<OTPResponse>();
 
 
 var autoMapper = new MapperConfiguration(mapper => mapper.AddProfile(new AutomapperHandler()));
@@ -83,7 +94,13 @@ builder.Host.UseSerilog();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(option =>{
+    option.AddSecurityDefinition("oauth2" , new OpenApiSecurityScheme{
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey
+    });
+});
 
 var app = builder.Build();
 
@@ -96,7 +113,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("policy1");
 
+
 app.UseHttpsRedirection();
+
+app.UseSession();
 
 app.UseAuthentication();
 

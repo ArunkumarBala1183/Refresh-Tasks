@@ -3,6 +3,7 @@ using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using AutoMapper;
 using JWTAuthentication.Repository.AppModels;
 using JWTAuthentication.Repository.DatabaseContext;
 using JWTAuthentication.Repository.DbModels;
@@ -19,10 +20,12 @@ public class AuthenticationHelper : IAuthenticationService
 {
     private readonly JwtSettings jwtSettings;
     private readonly AuthenticationContext database;
-    public AuthenticationHelper(IOptions<JwtSettings> options, AuthenticationContext database)
+    private readonly IMapper mapper;
+    public AuthenticationHelper(IOptions<JwtSettings> options, AuthenticationContext database , IMapper mapper)
     {
         this.jwtSettings = options.Value;
         this.database = database;
+        this.mapper = mapper;
     }
 
     private async Task<object?> ValidateUser(UserCredentaials userCredentaials)

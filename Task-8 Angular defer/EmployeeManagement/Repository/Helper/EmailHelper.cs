@@ -36,18 +36,29 @@ namespace EmployeeManagement.Repository.Helper
 
                 using (var smtp = new SmtpClient())
                 {
+                    Log.Information("SMTP Connecting...");
                     await smtp.ConnectAsync(_config.Host, _config.Port, SecureSocketOptions.StartTls);
+
+                    Log.Information("SMTP Connected...");
+
+                    Log.Information("SMTP Authenticating..");
 
                     await smtp.AuthenticateAsync(_config.Sender, _config.Password);
 
+                    Log.Information("SMTP Authenticated..");
+
+                    Log.Information("Ready TO send Email..");
                     await smtp.SendAsync(email);
+
+                    Log.Information("Email Sended..");
 
                     await smtp.DisconnectAsync(true);
                 }
             }
             catch (Exception error)
             {
-                Log.Error("{@error}", error);
+                Log.Information("Error in sending");
+                Log.Error("Error : \n{@error}", error.Message);
             }
         }
     }

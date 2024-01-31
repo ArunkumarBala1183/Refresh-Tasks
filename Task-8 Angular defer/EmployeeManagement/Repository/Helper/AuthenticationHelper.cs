@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -20,12 +19,14 @@ namespace EmployeeManagement.Repository.Helper
     {
         private readonly DatabaseContext database;
         private readonly JwtSettings jwtOptions;
-        public AuthenticationHelper(DatabaseContext database, IOptions<JwtSettings> jwtOptions)
+        private readonly IEmailService service;
+        public AuthenticationHelper(DatabaseContext database, IOptions<JwtSettings> jwtOptions , IEmailService emailService)
         {
             this.database = database;
             this.jwtOptions = jwtOptions.Value;
+            this.service = emailService;
         }
-        public async Task<object> AuthenticateCredentials(UserCredentialsDto credentials)
+        public async Task<object> AuthenticateCredentials(UserCredentialsDto credentials , bool isOtpVerified)
         {
             try
             {
@@ -34,9 +35,23 @@ namespace EmployeeManagement.Repository.Helper
 
                 if (userExists != null)
                 {
-                    var token = await this.GenerateToken(userExists);
+                    if (isOtpVerified)
+                    {
+                        var token = await this.GenerateToken(userExists);
 
-                    return token;
+                        return token;
+                    }
+                    else
+                    {
+                        var otp = this.generateOtp();
+                        await this.multifactorAuthenticate(userExists.EmployeeId , otp);
+
+                        return new OTPResponse()
+                        {
+                            OTP = otp,
+                            OTPStatus = "Please Verify OTP"
+                        };
+                    }
                 }
                 else
                 {
@@ -78,18 +93,18 @@ namespace EmployeeManagement.Repository.Helper
 
                 var validatedToken = securityToken as JwtSecurityToken;
 
-                if(validatedToken != null && validatedToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256))
+                if (validatedToken != null && validatedToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256))
                 {
                     string username = principal.Identity.Name;
 
                     var exitUser = await database.RefreshTokens.FirstOrDefaultAsync(user => user.UserName == username && user.RefreshToken == token.RefreshToken);
-                    
+
                     if (exitUser != null)
                     {
                         var newToken = new JwtSecurityToken(
                             claims: principal.Claims.ToArray(),
-                            expires : DateTime.UtcNow.AddSeconds(30),
-                            signingCredentials : new SigningCredentials(new SymmetricSecurityKey(securityKey) , SecurityAlgorithms.HmacSha256)
+                            expires: DateTime.UtcNow.AddMinutes(1),
+                            signingCredentials: new SigningCredentials(new SymmetricSecurityKey(securityKey), SecurityAlgorithms.HmacSha256)
                             );
                         var finalToken = tokenHandler.WriteToken(newToken);
 
@@ -162,6 +177,26 @@ namespace EmployeeManagement.Repository.Helper
 
         }
 
+        private int generateOtp()
+        {
+            Random randomNumber = new Random();
+
+            return randomNumber.Next(1000,9999);
+        }
+
+        private async Task multifactorAuthenticate(int employeeId , int otp)
+        {
+            string email = await database.Employees.Where(user => user.EmployeeId == employeeId).Select(id => id.EmailId).FirstOrDefaultAsync();
+
+            EmailRequest emailRequest = new EmailRequest()
+            {
+                ToEmailAddress = email,
+                Subject = "Login Request",
+                Body = $"Otp for Login : {otp}"
+            };
+
+            service.SendEmail(emailRequest);
+        }
 
     }
 }

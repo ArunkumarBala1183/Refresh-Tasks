@@ -1,5 +1,7 @@
 using System.Text;
+using AutoMapper;
 using JWTAuthentication.Repository.DatabaseContext;
+using JWTAuthentication.Repository.Helper;
 using JWTAuthentication.Repository.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -44,6 +46,12 @@ Log.Logger = new LoggerConfiguration()
 .WriteTo.Console()
 .MinimumLevel.Information()
 .CreateLogger();
+
+var autoMapper = new MapperConfiguration(options => options.AddProfile(new AutomapperHelper()));
+
+IMapper mapper = autoMapper.CreateMapper();
+
+builder.Services.AddSingleton(mapper);
 
 builder.Host.UseSerilog();
 

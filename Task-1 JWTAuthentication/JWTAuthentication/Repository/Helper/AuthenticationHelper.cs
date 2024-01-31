@@ -3,9 +3,11 @@ using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using AutoMapper;
 using JWTAuthentication.Repository.AppModels;
 using JWTAuthentication.Repository.DatabaseContext;
 using JWTAuthentication.Repository.DbModels;
+using JWTAuthentication.Repository.DTOs;
 using JWTAuthentication.Repository.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -19,10 +21,12 @@ public class AuthenticationHelper : IAuthenticationService
 {
     private readonly JwtSettings jwtSettings;
     private readonly AuthenticationContext database;
-    public AuthenticationHelper(IOptions<JwtSettings> options, AuthenticationContext database)
+    private readonly IMapper mapper;
+    public AuthenticationHelper(IOptions<JwtSettings> options, AuthenticationContext database , IMapper mapper)
     {
         this.jwtSettings = options.Value;
         this.database = database;
+        this.mapper = mapper;
     }
 
     private async Task<bool> ValidateUser(UserCredentaials userCredentaials)
@@ -38,8 +42,9 @@ public class AuthenticationHelper : IAuthenticationService
 
             return false;
         }
-        catch (SqlException)
+        catch (SqlException error)
         {
+            Log.Information("Error : \n"  + error.Message);
             throw;
         }
 
@@ -66,19 +71,22 @@ public class AuthenticationHelper : IAuthenticationService
 
         return finalToken;
     }
-    public async Task<object> authenticateUser(UserCredentaials userCredentaials)
+    public async Task<object> authenticateUser(UserCrendentialsDTO userCredentialsDTO)
     {
-        ApiResponse apiResponse = new ApiResponse();
         try
         {
-            if (await this.ValidateUser(userCredentaials))
+            Log.Information("Authenticate User Function");
+            UserCredentaials userCrendentials = this.mapper.Map<UserCredentaials>(userCredentialsDTO);
+            if (await this.ValidateUser(userCrendentials))
             {
-                var token = await this.generateToken(userCredentaials);
+                Log.Information("Validate passsed before generate token ");
+                var token = await this.generateToken(userCrendentials);
 
+                Log.Information("Token : {@token}" , token);
                 return new TokenResponse()
                 {
                     Token = token,
-                    RefeshToken = await this.generateRefreshToken(userCredentaials.Username)
+                    RefeshToken = await this.generateRefreshToken(userCrendentials.Username)
                 };
             }
             else

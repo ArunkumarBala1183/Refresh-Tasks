@@ -3,10 +3,8 @@ using EmployeeManagement.Models.DbModels;
 using EmployeeManagement.Models.DTOs;
 using EmployeeManagement.Repository.Handler;
 using EmployeeManagement.Repository.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Net;
+using Serilog;
 
 namespace EmployeeManagement.Controllers
 {
@@ -15,20 +13,33 @@ namespace EmployeeManagement.Controllers
     public class AuthenticationController : ControllerBase
     {
         private readonly IAuthenticateService authentication;
-        public AuthenticationController(IAuthenticateService authentication)
+        private readonly OTPResponse otpRepository;
+        public AuthenticationController(IAuthenticateService authentication, OTPResponse otpRepository)
         {
             this.authentication = authentication;
+            this.otpRepository = otpRepository;
         }
 
         [HttpPost("AuthenticateUser")]
-        public async Task<IActionResult> AuthenticateUser(UserCredentialsDto userCredentials)
+        public async Task<IActionResult> AuthenticateUser([FromBody] UserCredentialsDto userCredentials)
         {
             try
             {
-                var response = await authentication.AuthenticateCredentials(userCredentials);
+                var response = await authentication.AuthenticateCredentials(userCredentials, otpRepository.isOtpVerified);
 
-                if (response != null)
+                if (response != null && response.GetType() == typeof(OTPResponse))
                 {
+                    OTPResponse otpResponse = (OTPResponse)response;
+                    otpRepository.OTP = otpResponse.OTP;
+
+                    return Ok(new { status = otpResponse.OTPStatus });
+                }
+                else if (response != null)
+                {
+                    if (otpRepository.isOtpVerified)
+                    {
+                        otpRepository.Dispose(true);
+                    }
                     return Ok(response);
                 }
                 else
@@ -42,11 +53,40 @@ namespace EmployeeManagement.Controllers
             }
         }
 
+        [HttpPost("OTPValidate")]
+        public async Task<IActionResult> OTPValidate([FromForm]string OTP)
+        {
+            try
+            {
+                string storedOTP = Convert.ToString(otpRepository.OTP);
+
+                if (storedOTP != null)
+                {
+                    if (string.Equals(storedOTP, OTP))
+                    {
+                        otpRepository.isOtpVerified = true;
+                        return Ok(new { status = "OTP Verified" });
+                    }
+
+                    return Unauthorized();
+                }
+                else
+                {
+                    return NoContent();
+                }
+            }
+            catch (Exception error)
+            {
+                Log.Information("Error : " + error.Message);
+                return Unauthorized();
+            }
+        }
+
         [HttpPost("GenerateNewToken")]
-        public async Task<IActionResult> GenerateNewToken (Token token)
+        public async Task<IActionResult> GenerateNewToken(Token token)
         {
             var response = await this.authentication.GenerateNewToken(token);
-            
+
             if (response != null)
             {
                 return Ok(response);
